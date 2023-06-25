@@ -1,0 +1,51 @@
+ReadMe File
+Purposes of every class and interface:
+The ImageInterface interface represents all the functions that any model in our program should support.
+The Image interface, which we just added, contains methods for both ImagePPM (a PPM image) and ImageOther (an image of png, bmp, or jpg format). These two classes take in an ImageReader that has all the stored data, and extracts the data, creating a 2-dimensional array of pixels, on which all the operations are performed. We also have an AbstractImage class (which we also just added) which essentially has all the operations common to both ImagePPM and ImageOther, and is called upon everytime we want to perform an operation on any image.
+The ImagePixel interface represents all the functions that any pixel in our program should support. This is because these functions are called in our Image class.
+The Pixel class implements the ImagePixel interface and supports all the functionalities. This pixel class will be used in our model (the image class). This makes it easy to represent colors and create coloured and grayscale pixels. It also allows us to perform the calculations for each separate pixel in the class itself.
+The ImageReader and ImageWriter interfaces (which we added) separate the reading and writing of files from the model itself, leaving it oblivious to the file names and destinations. The imageReaderGen can take in either an ImageReaderPPM or an ImageReaderOther, and perform the ‘read’ operations for each (we added these classes as well). The imageReaderPPM can read a PPM image and when the image is read, all of the relevant data is stored in the class, and can be outputted through its methods, and the ImageReaderOther does basically the same thing, except for other file formats (specifically .png, .bmp, and .jpg). The ImageWriterGen, ImageWriterPPM, and ImageWriterOther classes basically do the same things, except that they write the files to the local device instead of just reading them (we added these as well).
+The view and its interface as of now print messages to system.out. They are classes that we have defined, (1) to keep the MVC design and (2) to create a view that allows us to represent the images / information differently in the future.
+The IGui interface contains the methods for a GUI of this program, and the class Gui contains methods to perform all the operations mentioned above, except by using an interactive graphical user interface.
+The controller interface defines a single method, run program that should be supported in every implementation of the controller for this mvc as all controllers should be able to run the program.
+The Image controller class runs the program, and stores all the images in a hashmap, so that any previous image can be edited and not all images have to be saved and re loaded for our program to work. The image controller executes commands based on the user inputs (explained below). The GuiController class on the other hand runs the program through the implemented GUI, and the IGuiController class is the interface for this controller.
+In the commands package, the command interface represents all the functionality that any command in our design should contain. Each command should be able to be executed. We have also improved on our commands, by putting all our commands into a hashmap, then calling upon each of them in our controller when we need to. We have also added support for the “blur” and “sharpen” commands. We have also added support for the partial image manipulation commands, such as "partialValue" and "partialRedComponent".
+The simple command abstract class implements the command interface, and represents an abstract class that abstracts most of the commands. It abstracts all the commands that need only the name of the image in our hashmap and the name to call the image in the hashmap. This abstract class also returns a message dependent on its inheritors when the execution is successful.
+Each inheritor of the simple command simply has a method to execute the program and a message method that states that the execution was successful.
+The complex Command is another abstract class that implements the command interface and represents all commands that do not fall under the simple command. The abstract class exists because it differentiates the simple and complex commands. The class also exists to serve as an indicator for the methods that the complex commands hold.
+The save, load and brighten commands are complex commands that have their own separate implementation of execute. They also send out messages to state that the execution has been successful.
+
+The start.ppm file used here was created by our team. We just made a 16-pixel file with different colors to work on. Please open the ppm file to properly see it. We own this and we authorize the use of it in our project.
+
+Additional changes made (assignment 5):
+We renamed some of the commands to make the names better suit their individual needs. For example:
+SaveCommand is now Save
+LoadCommand is now Load
+VerticalFlipCommand is now VerticalFlip
+We renamed some of the methods to better suit their individual needs. For example:
+read() is now readPPM()
+write() is now split into writeImagePPM() and writeImageOther()
+We added more functionality to the program, and added their specific commands as well. Specifically, we added:
+A createSepia() method
+A createGrayScale() method
+A blurImage() method
+A sharpenImage() method
+We added the functionality to parse a given script, and execute all the commands. We therefore also added a script file to our project.
+
+Additional changes made (assignment 6):
+A downSize() method
+Methods for performing partial image manipulation
+An IGui interface
+A Gui class
+An IGuiController interface
+A GuiController class
+A Histogram class
+We added a GUI for our program, which can be run through command line arguments.
+
+How to use command line arguments:
+For running the script, your argument should be "ImageCommands.txt".
+For running the program through the console (command line arguments), your argument should be "-text".
+For running the GUI, your argument should be an empty string.
+Any other arguments will result in an error, and the program will quit.
+
+

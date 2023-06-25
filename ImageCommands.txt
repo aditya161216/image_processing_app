@@ -1,0 +1,149 @@
+load original/Start.ppm start
+brighten -100 start start-darker
+brighten 200 start start-brighter
+save original/start-darker.ppm start-darker 
+save original/start-brighter.ppm start-brighter
+vertical-flip start start-vertical
+save original/start-vertical.ppm start-vertical
+horizontal-flip start start-horizontal
+save original/start-horizontal.ppm start-horizontal
+value-component start start-value
+save original/start-value.ppm start-value
+red-component start start-red
+save original/start-red.ppm start-red
+green-component start start-green
+save original/start-green.ppm start-green
+blue-component start start-blue
+save original/start-blue.ppm start-blue
+intensity-component start start-intensity
+save original/start-intensity.ppm start-intensity
+luma-component start start-luma
+save original/start-luma.ppm start-luma
+sharpen start start-sharpen
+save original/start-sharpen.ppm start-sharpen
+blur start start-blur
+save original/start-blur.ppm start-blur
+sepia start start-sepia
+save original/start-sepia.ppm start-sepia
+grayscale start start-gray
+save original/start-gray.ppm start-gray
+
+load original/Start.png start
+brighten -100 start start-darker
+brighten 200 start start-brighter
+save original/start-darker.png start-darker 
+save original/start-brighter.png start-brighter
+vertical-flip start start-vertical
+save original/start-vertical.png start-vertical
+horizontal-flip start start-horizontal
+save original/start-horizontal.png start-horizontal
+value-component start start-value
+save original/start-value.png start-value
+red-component start start-red
+save original/start-red.png start-red
+green-component start start-green
+save original/start-green.png start-green
+blue-component start start-blue
+save original/start-blue.png start-blue
+intensity-component start start-intensity
+save original/start-intensity.png start-intensity
+luma-component start start-luma
+save original/start-luma.png start-luma
+sharpen start start-sharpen
+save original/start-sharpen.png start-sharpen
+blur start start-blur
+save original/start-blur.png start-blur
+sepia start start-sepia
+save original/start-sepia.png start-sepia
+grayscale start start-gray
+save original/start-gray.png start-gray
+
+load original/Start.bmp start
+brighten -100 start start-darker
+brighten 200 start start-brighter
+save original/start-darker.bmp start-darker 
+save original/start-brighter.bmp start-brighter
+vertical-flip start start-vertical
+save original/start-vertical.bmp start-vertical
+horizontal-flip start start-horizontal
+save original/start-horizontal.bmp start-horizontal
+value-component start start-value
+save original/start-value.bmp start-value
+red-component start start-red
+save original/start-red.bmp start-red
+green-component start start-green
+save original/start-green.bmp start-green
+blue-component start start-blue
+save original/start-blue.bmp start-blue
+intensity-component start start-intensity
+save original/start-intensity.bmp start-intensity
+luma-component start start-luma
+save original/start-luma.bmp start-luma
+sharpen start start-sharpen
+save original/start-sharpen.bmp start-sharpen
+blur start start-blur
+save original/start-blur.bmp start-blur
+sepia start start-sepia
+save original/start-sepia.bmp start-sepia
+grayscale start start-gray
+save original/start-gray.bmp start-gray
+
+load original/Start.jpg start
+brighten -100 start start-darker
+brighten 200 start start-brighter
+save original/start-darker.jpg start-darker 
+save original/start-brighter.jpg start-brighter
+vertical-flip start start-vertical
+save original/start-vertical.jpg start-vertical
+horizontal-flip start start-horizontal
+save original/start-horizontal.jpg start-horizontal
+value-component start start-value
+save original/start-value.jpg start-value
+red-component start start-red
+save original/start-red.jpg start-red
+green-component start start-green
+save original/start-green.jpg start-green
+blue-component start start-blue
+save original/start-blue.jpg start-blue
+intensity-component start start-intensity
+save original/start-intensity.jpg start-intensity
+luma-component start start-luma
+save original/start-luma.jpg start-luma
+sharpen start start-sharpen
+save original/start-sharpen.jpg start-sharpen
+blur start start-blur
+save original/start-blur.jpg start-blur
+sepia start start-sepia
+save original/start-sepia.jpg start-sepia
+grayscale start start-gray
+save original/start-gray.jpg start-gray
+load Images/partialIm.png clip
+partialSepia start clip partialSep
+save original/start-partialSep.ppm partialSep
+load Images/partialIm.png clip
+partialGrayscale start clip partialGray
+save original/start-partialGray.ppm partialGray
+load Images/partialIm.png clip
+partialBlur start clip partialBlur
+save original/start-partialBlur.ppm partialBlur
+load Images/partialIm.png clip
+partialSharpen start clip partialSharpen
+save original/start-partialSharpen.ppm partialSharpen
+load Images/partialIm.png clip
+partialRedComponent start clip partialRed
+save original/start-partialRed.ppm partialRed
+load Images/partialIm.png clip
+partialGreenComponent start clip partialGreen
+save original/start-partialGreen.ppm partialGreen
+load Images/partialIm.png clip
+partialBlueComponent start clip partialBlue
+save original/start-partialBlue.ppm partialBlue
+load Images/partialIm.png clip
+partialIntensity start clip partialIntensity
+save original/start-partialIntensity.ppm partialIntensity
+load Images/partialIm.png clip
+partialValue start clip partialValue
+save original/start-partialValue.ppm partialValue
+load Images/partialIm.png clip
+partialLuma start clip partialLuma
+save original/start-partialLuma.ppm partialLuma
